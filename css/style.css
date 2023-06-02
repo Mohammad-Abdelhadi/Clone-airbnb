@@ -9,7 +9,7 @@ body {
   grid-template-areas:
     "logo search search search left-side left-side left-side  "
     "header header header header header header header ";
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
 }
 .header {
   display: flex;
@@ -22,9 +22,6 @@ body {
 .center-items {
   background-color: rgb(255, 255, 255);
   width: 400px;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
 }
 .left-side {
   grid-area: left-side;
@@ -34,7 +31,6 @@ body {
 .logo img {
   width: 100px;
   height: 40px;
-  padding-top: 20px;
 }
 .search-logo img {
   width: 30px;
@@ -58,7 +54,6 @@ body {
   border-radius: 20px; /* or any other value you prefer */
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* adjust the values to your liking */
   grid-area: search;
-  padding: 0;
 }
 .search li {
   margin: 0 10px;
@@ -74,12 +69,12 @@ body {
   margin: 0 10px;
 }
 .menu {
-  width: 75px;
+  width: 77px;
   display: flex;
   border: 2px solid #f0f0f0;
   border-radius: 20px;
   box-shadow: 6px 3px 4px rgba(0, 0, 0, 0.1);
-  height: 31px;
+  height: 21px;
   align-items: center;
 }
 hr {
@@ -87,8 +82,11 @@ hr {
   opacity: 60%;
 }
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 65px;
+  margin: 0px 10px;
+  justify-content: center;
 }
 .line-cards {
   display: flex;
@@ -132,14 +130,23 @@ span {
   font-weight: bold;
 }
 .last-con {
-  display: grid;
+  display: flex;
   margin-top: 20px;
   margin-left: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px 7px;
+  justify-content: center;
 }
 .image-last img {
   width: 307px;
   height: 290px;
+}
+.image-last {
+  border: 1px solid #82828254;
+  padding: 3px;
 }
 .city-rate {
   width: 80%;
